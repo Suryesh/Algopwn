@@ -107,12 +107,15 @@ https://MH9A52MZTO-dsn.algolia.net/1/indexes/products_v1/settings?x-algolia-appl
 <!-- clickable thumbnail -->
 [![Algopwn PoC - VIDEO_TITLE](https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=DtSpnyILWd4)
 
+
+
+
 [![Algopwn PoC - How to verify PoC](https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=DtSpnyILWd4)
 
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank">
-    <img src="https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg" alt="Algopwn PoC video" width="720"/>
+  <a href="https://www.youtube.com/watch?v=DtSpnyILWd4" target="_blank">
+    <img src="https://img.youtube.com/vi/DtSpnyILWd4/hqdefault.jpg" alt="Algopwn PoC video" width="720"/>
   </a>
 </p>
 
@@ -121,17 +124,10 @@ https://MH9A52MZTO-dsn.algolia.net/1/indexes/products_v1/settings?x-algolia-appl
 
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank">
+  <a href="https://www.youtube.com/watch?v=DtSpnyILWd4" target="_blank">
     <img src="https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg" alt="Algopwn PoC video" width="720"/>
   </a>
 </p>
-
-<p align="center">
-  <strong>Algopwn PoC:</strong> Quick demo showing how to verify `highlightPreTag` PoC. ▶️
-</p>
-
-
-[![Algopwn PoC](./assets/algopwn_poc_thumbnail.png)](https://www.youtube.com/watch?v=DtSpnyILWd4)
 
 
 
