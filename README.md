@@ -101,17 +101,9 @@ Do you want to update this index's settings with payload (highlightPreTag=hacked
 https://MH9A52MZTO-dsn.algolia.net/1/indexes/products_v1/settings?x-algolia-application-id=MH9A52MZTO&x-algolia-api-key=4d896...
 ```
 
+## Video PoC:
 
-==========
-
-<!-- clickable thumbnail -->
-[![Algopwn PoC - VIDEO_TITLE](https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=DtSpnyILWd4)
-
-
-
-
-[![Algopwn PoC - How to verify PoC](https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=DtSpnyILWd4)
-
+[![Watch PoC on YouTube](https://img.shields.io/badge/Watch-PoC_on_YouTube-red?logo=youtube)](https://www.youtube.com/watch?v=DtSpnyILWd4)
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=DtSpnyILWd4" target="_blank">
@@ -120,7 +112,7 @@ https://MH9A52MZTO-dsn.algolia.net/1/indexes/products_v1/settings?x-algolia-appl
 </p>
 
 
-[![Watch PoC on YouTube](https://img.shields.io/badge/Watch-PoC_on_YouTube-red?logo=youtube)](https://www.youtube.com/watch?v=DtSpnyILWd4)
+
 
 
 <p align="center">
