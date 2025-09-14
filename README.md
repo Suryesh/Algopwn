@@ -42,7 +42,7 @@ Algopwn helps security practitioners quickly assess Algolia API key exposures. T
 python3 algopwn.py -h
 ```
 
-![Signup](img/signup-miscon-2.png)
+![Help](img/help.png)
 
 
 
@@ -55,7 +55,7 @@ python3 algopwn.py -h
    - If the key is **sensitive** (e.g., `editSettings`, `addObject`, `deleteIndex`), the tool asks if you want to proceed with exploitation steps.
 4. If you choose to proceed, you can pick an index, view its data/settings, and confirm an update. After updating, a PoC URL is printed.
 
-![User](img/user-info-2.png)
+![Usages](img/usages.png)
 
 ```
 python3 algopwn.py
