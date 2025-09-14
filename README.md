@@ -44,7 +44,7 @@ python3 algopwn.py -h
 
 ![Help](img/help.png)
 
-
+⚠️ **Important**:  You need to change one line of code before using this tool:
 
 ## Usage
 
