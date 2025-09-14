@@ -2,7 +2,7 @@
 
 **Algopwn — Algolia API Key Analyzer & (authorized) Exploiter**
 
-Algopwn helps security researchers and bug-bounty hunters quickly audit Algolia API keys, determine their ACLs, enumerate indexes, and — if explicitly authorized — perform a controlled PoC update (non-destructive by design except where explicitly requested by the user). After a successful update the tool prints a PoC verification URL you can open in a browser.
+Algopwn helps security practitioners quickly assess Algolia API key exposures. The tool prompts for App ID and API key, fetches key metadata and ACLs, and classifies keys as informative (read-only) or sensitive (modifiable). For sensitive keys, Algopwn lists indexes, fetches index data and settings, and — only after interactive confirmation — can apply a reversible PoC update and print a copy-paste verification URL.
 
 > ⚠️ **Important**: Only use Algopwn against applications you own or have explicit written permission to test (bug bounty scope, pentest engagement, etc.). Misuse may be illegal and unethical.
 
@@ -49,10 +49,7 @@ python3 algopwn.py -h
 3. The tool prints key info (JSON), then:
    - If the key is **informative only** (e.g., `search`, `listIndexes`, `settings`), the tool reports this and exits.
    - If the key is **sensitive** (e.g., `editSettings`, `addObject`, `deleteIndex`), the tool asks if you want to proceed with exploitation steps.
-4. If you choose to proceed, you can pick an index, view its data/settings, and confirm an update. After updating, a PoC URL is printed:
-    ```
-    https://{appID}-dsn.algolia.net/1/indexes/{index_name}/settings?x-algolia-application-id={appID}&x-algolia-api-key={apiKey}
-    ```
+4. If you choose to proceed, you can pick an index, view its data/settings, and confirm an update. After updating, a PoC URL is printed.
 
 ```
 python3 algopwn.py
@@ -90,9 +87,10 @@ Indexes available:
 Enter the index name to work with: products_v1
 [fetch data]
 [fetch settings]
+
 Do you want to update this index's settings with payload (highlightPreTag=hacked)? (y/n): y
 [+] Update Response: {...}
+
 [+] PoC Verification URL:
 https://MH9A52MZTO-dsn.algolia.net/1/indexes/products_v1/settings?x-algolia-application-id=MH9A52MZTO&x-algolia-api-key=4d896...
-
 ```
