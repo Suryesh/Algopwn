@@ -112,17 +112,6 @@ https://MH9A52MZTO-dsn.algolia.net/1/indexes/products_v1/settings?x-algolia-appl
 </p>
 
 
-
-
-
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=DtSpnyILWd4" target="_blank">
-    <img src="https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg" alt="Algopwn PoC video" width="720"/>
-  </a>
-</p>
-
-
-
 ## License
 This project is licensed under the MIT License. See the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) file for details.
 
