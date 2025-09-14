@@ -48,7 +48,7 @@ python3 algopwn.py -h
 
 ```
 Line number 82: payload = {"highlightPreTag": "Hacked by Suryesh"}
-- change highlightPreTag syntax with your name i.e, {"highlightPreTag": "Hacked by {yourname-xyz}"}
+- change highlightPreTag syntax with your name i.e, {"highlightPreTag": "Hacked by (yourname-xyz)"}
 ```
 
 ## Usage
