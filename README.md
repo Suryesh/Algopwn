@@ -42,6 +42,10 @@ Algopwn helps security practitioners quickly assess Algolia API key exposures. T
 python3 algopwn.py -h
 ```
 
+![Signup](img/signup-miscon-2.png)
+
+
+
 ## Usage
 
 1. Run the script `python3 algopwn.py` and follow the prompts:
@@ -50,6 +54,8 @@ python3 algopwn.py -h
    - If the key is **informative only** (e.g., `search`, `listIndexes`, `settings`), the tool reports this and exits.
    - If the key is **sensitive** (e.g., `editSettings`, `addObject`, `deleteIndex`), the tool asks if you want to proceed with exploitation steps.
 4. If you choose to proceed, you can pick an index, view its data/settings, and confirm an update. After updating, a PoC URL is printed.
+
+![User](img/user-info-2.png)
 
 ```
 python3 algopwn.py
@@ -94,9 +100,6 @@ Do you want to update this index's settings with payload (highlightPreTag=hacked
 [+] PoC Verification URL:
 https://MH9A52MZTO-dsn.algolia.net/1/indexes/products_v1/settings?x-algolia-application-id=MH9A52MZTO&x-algolia-api-key=4d896...
 ```
-
-![Algopwn Banner](./assets/banner.png)
-
 
 ## License
 This project is licensed under the MIT License. See the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) file for details.
