@@ -4,7 +4,7 @@
 
 Algopwn helps security researchers and bug-bounty hunters quickly audit Algolia API keys, determine their ACLs, enumerate indexes, and — if explicitly authorized — perform a controlled PoC update (non-destructive by design except where explicitly requested by the user). After a successful update the tool prints a PoC verification URL you can open in a browser.
 
-> ⚠️ **Important**: Only use Algohunt against applications you own or have explicit written permission to test (bug bounty scope, pentest engagement, etc.). Misuse may be illegal and unethical.
+> ⚠️ **Important**: Only use Algopwn against applications you own or have explicit written permission to test (bug bounty scope, pentest engagement, etc.). Misuse may be illegal and unethical.
 
 ---
 
@@ -22,21 +22,12 @@ Algopwn helps security researchers and bug-bounty hunters quickly audit Algolia 
 - Small, dependency-light: uses `requests` and `colorama`.
 
 
-## Quick demo (what to expect)
-
-1. Run the script:
-    ```
-    python3 algohunt.py
-    ```
-
----
-
 ## Installation
 
 1. Clone the repo:
     ```
-    git clone https://github.com/<your-username>/Algohunt.git
-    cd Algohunt
+    git clone https://github.com/Suryesh/Algopwn.git
+    cd Algopwn
     ```
 
 2. Install dependencies:
@@ -48,12 +39,12 @@ Algopwn helps security researchers and bug-bounty hunters quickly audit Algolia 
 
 ## Help
 ```
-python3 algohunt.py -h
+python3 algopwn.py -h
 ```
 
 ## Usage
 
-1. Run the script and follow the prompts:
+1. Run the script `python3 algopwn.py` and follow the prompts:
 2. Enter the Algolia App ID and API key when prompted.
 3. The tool prints key info (JSON), then:
    - If the key is **informative only** (e.g., `search`, `listIndexes`, `settings`), the tool reports this and exits.
@@ -64,9 +55,8 @@ python3 algohunt.py -h
     ```
 
 ```
-python3 algohunt.py
-```
-```
+python3 algopwn.py
+
    _   _               ___
   /_\ | | __ _  ___   / _ \__      ___ __
  //_\\| |/ _` |/ _ \ / /_)/\ \ /\ / / '_ \
@@ -88,7 +78,7 @@ Enter Algolia API Key: 4d89644522b528406ec821a713da60fe
 This key only has ['search'] permissions. So, it is Informative only.
 
 
-### If a sensitive key is detected:
+If a sensitive key is detected:
 
 This key has sensitive ACLs: ['editSettings', 'deleteObject', etc.]
 Do you want to proceed with exploitation? (y/n): y
