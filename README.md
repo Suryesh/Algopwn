@@ -46,6 +46,11 @@ python3 algopwn.py -h
 
 ⚠️ **Important**:  You need to change one line of code before using this tool:
 
+```
+Line number 82: payload = {"highlightPreTag": "Hacked by Suryesh"}
+- change highlightPreTag syntax with your name i.e, {"highlightPreTag": "Hacked by {yourname-xyz}"}
+```
+
 ## Usage
 
 1. Run the script `python3 algopwn.py` and follow the prompts:
