@@ -99,7 +99,7 @@ Enter the index name to work with: products_v1
 [fetch data]
 [fetch settings]
 
-Do you want to update this index's settings with payload (highlightPreTag=hacked)? (y/n): y
+Do you want to update this index's settings with payload (highlightPreTag=Hacked by Suryesh)? (y/n): y
 [+] Update Response: {...}
 
 [+] PoC Verification URL:
