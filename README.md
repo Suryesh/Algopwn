@@ -94,3 +94,5 @@ Do you want to update this index's settings with payload (highlightPreTag=hacked
 [+] PoC Verification URL:
 https://MH9A52MZTO-dsn.algolia.net/1/indexes/products_v1/settings?x-algolia-application-id=MH9A52MZTO&x-algolia-api-key=4d896...
 ```
+
+![Algopwn Banner](./assets/banner.png)
