@@ -122,7 +122,11 @@ https://MH9A52MZTO-dsn.algolia.net/1/indexes/products_v1/settings?x-algolia-appl
   <a href="https://x.com/Suryesh_92"><img src="https://img.shields.io/badge/Twitter-@Suryesh__92-blue?logo=twitter&logoColor=white" alt="Twitter"></a>
   <a href="https://www.youtube.com/@HackWithSuryesh"><img src="https://img.shields.io/badge/YouTube-Subscribe-red?logo=youtube&logoColor=white" alt="YouTube"></a>
   <a href="https://medium.com/@hackwithsuryesh"><img src="https://img.shields.io/badge/Medium-Blog-black?logo=medium&logoColor=white" alt="Medium"></a>
+  <a href="https://instagram.com/suryesh_92"><img src="https://img.shields.io/badge/Instagram-Follow-pink?logo=instagram&logoColor=white" alt="Instagram"></a>
+  <a href="https://www.linkedin.com/in/dhananjay-kumar-suryesh-535995220/"><img src="https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://discord.com/invite/EfgnVNbh3N"><img src="https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white" alt="Discord"></a>
 </p>
+
 
 
 ## License
