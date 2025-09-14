@@ -73,9 +73,7 @@ Run the script and follow the prompts:
 ```
 python3 algohunt.py
 ```
-
-r"""
-
+```
    _   _               ___
   /_\ | | __ _  ___   / _ \__      ___ __
  //_\\| |/ _` |/ _ \ / /_)/\ \ /\ / / '_ \
@@ -88,6 +86,4 @@ r"""
 You can follow me on Twitter/X: https://x.com/Suryesh_92
 
 Subscribe to my Youtube Channel: https://www.youtube.com/@HackWithSuryesh
-
-Enter Algolia Application ID:
-"""
+```
