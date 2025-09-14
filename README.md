@@ -1,4 +1,4 @@
-# Algohunt
+# Algopwn
 
 **Algohunt — Algolia API Key Analyzer & (authorized) Exploiter**
 
@@ -54,15 +54,40 @@ Algohunt helps security researchers and bug-bounty hunters quickly audit Algolia
     cd Algohunt
     ```
 
-2. Install dependencies (recommended to use a virtualenv):
-    ```bash
-    python3 -m venv .venv
-    source .venv/bin/activate
-    pip install -r requirements.txt
-    ```
-   Or install manually:
-    ```bash
+2. Install dependencies:
+   ```
     pip install requests colorama
     ```
 
-> `requirements.txt` should contain:
+---
+
+## Help
+```
+python3 algohunt.py -h
+```
+
+## Usage
+
+Run the script and follow the prompts:
+
+```
+python3 algohunt.py
+```
+
+r"""
+
+   _   _               ___
+  /_\ | | __ _  ___   / _ \__      ___ __
+ //_\\| |/ _` |/ _ \ / /_)/\ \ /\ / / '_ \
+/  _  \ | (_| | (_) / ___/  \ V  V /| | | |
+\_/ \_/_|\__, |\___/\/       \_/\_/ |_| |_|
+         |___/
+
+      Algolia API Key Exploiter by Suryesh
+
+You can follow me on Twitter/X: https://x.com/Suryesh_92
+
+Subscribe to my Youtube Channel: https://www.youtube.com/@HackWithSuryesh
+
+Enter Algolia Application ID:
+"""
