@@ -114,25 +114,19 @@ https://MH9A52MZTO-dsn.algolia.net/1/indexes/products_v1/settings?x-algolia-appl
 
 ## References/Write-up:
 
-[![Medium Blog](https://img.shields.io/badge/Read%20My-Blog-black?logo=medium&logoColor=white)](https://medium.com/@YourMediumHandle)
+[![Medium Blog](https://img.shields.io/badge/Read%20My-Blog-black?logo=medium&logoColor=white)](https://medium.com/@hackwithsuryesh/algolia-api-key-exploitation-leads-to-1000-bounty-p2-on-private-program-2e147f052ff0)
 
 
 <p align="center">
   <a href="https://x.com/Suryesh_92"><img src="https://img.shields.io/badge/Twitter-@Suryesh__92-blue?logo=twitter&logoColor=white" alt="Twitter"></a>
   <a href="https://www.youtube.com/@HackWithSuryesh"><img src="https://img.shields.io/badge/YouTube-Subscribe-red?logo=youtube&logoColor=white" alt="YouTube"></a>
-  <a href="https://medium.com/@YourMediumHandle"><img src="https://img.shields.io/badge/Medium-Blog-black?logo=medium&logoColor=white" alt="Medium"></a>
+  <a href="https://medium.com/@hackwithsuryesh"><img src="https://img.shields.io/badge/Medium-Blog-black?logo=medium&logoColor=white" alt="Medium"></a>
 </p>
 
 
 ## 📖 My Blog
 You can also read my detailed write-ups and research on **Medium**:  
 👉 [https://medium.com/@YourMediumHandle](https://medium.com/@YourMediumHandle)
-
----
-
-✍️ Author: [Suryesh](https://x.com/Suryesh_92)  
-📺 YouTube: [HackWithSuryesh](https://www.youtube.com/@HackWithSuryesh)  
-📝 Blog: [Medium](https://medium.com/@YourMediumHandle)
 
 
 ## License
