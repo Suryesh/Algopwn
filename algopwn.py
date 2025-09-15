@@ -44,7 +44,7 @@ init(autoreset=True)
 # acl permission
 
 SENSITIVE_ACLS = {
-    "addObject", "deleteObject", "deleteIndex", "editSettings", "addUserKey", "deleteUserKey", "editSettings", "browse","seeUnretrievableAttributes","analytics","logs","recommendation"
+    "addObject", "deleteObject", "deleteIndex", "editSettings", "addUserKey", "deleteUserKey", "editSettings","seeUnretrievableAttributes","analytics","logs",
 }
 INFORMATIVE_ACLS = {"search", "listIndexes", "settings"}
 
