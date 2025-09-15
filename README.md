@@ -60,7 +60,7 @@ Line number 82: payload = {"highlightPreTag": "Hacked by Suryesh"}
    - If the key is **sensitive** (e.g., `editSettings`, `addObject`, `deleteIndex`), the tool asks if you want to proceed with exploitation steps.
 4. If you choose to proceed, you can pick an index, view its data/settings, and confirm an update. After updating, a PoC URL is printed.
 
-![Usages](img/usages.png)
+![Usages](img/use.png)
 
 ```
 python3 algopwn.py
