@@ -6,7 +6,7 @@ import sys
 from colorama import Fore, Style, init
 
 
-SCRIPT_VERSION = "1.0.5"
+SCRIPT_VERSION = "1.0.0"
 REMOTE_SCRIPT_URL = "https://raw.githubusercontent.com/Suryesh/Algopwn/main/algopwn.py"
 
 
