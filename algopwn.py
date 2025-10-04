@@ -174,5 +174,5 @@ def main():
             f"\n{Fore.GREEN}This key only has {list(found_informative) or 'unknown'} permissions. So, it is Informative only.{Style.RESET_ALL}"
         )
 if __name__ == "__main__":
-    main()
     check_for_updates()
+    main()
