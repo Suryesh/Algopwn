@@ -6,7 +6,7 @@ import sys
 from colorama import Fore, Style, init
 
 init(autoreset=True)
-SCRIPT_VERSION = "1.0.3"
+SCRIPT_VERSION = "1.0.4"
 REMOTE_SCRIPT_URL = "https://raw.githubusercontent.com/Suryesh/Algopwn/main/algopwn.py"
 
 
@@ -147,8 +147,7 @@ def main():
     if "-h" in sys.argv or "--help" in sys.argv:
         help_menu()
         return
-    print_banner()
-    check_for_updates()
+    print_bannera()
     try:
         check_for_updates()
     except TypeError:
