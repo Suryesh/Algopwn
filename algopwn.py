@@ -149,6 +149,10 @@ def main():
         return
     print_banner()
     check_for_updates()
+    try:
+        check_for_updates()
+    except TypeError:
+        check_for_updates(False)
 
     app_id = input(f"{Fore.YELLOW}Enter Algolia Application ID: {Style.RESET_ALL}").strip()
     api_key = input(f"{Fore.YELLOW}Enter Algolia API Key: {Style.RESET_ALL}").strip()
