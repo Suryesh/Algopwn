@@ -1,12 +1,12 @@
-#!/usr/bin/env python3
 import argparse
 import json
 import requests
 import sys
+import re
 from colorama import Fore, Style, init
 
 init(autoreset=True)
-SCRIPT_VERSION = "1.0.4"
+SCRIPT_VERSION = "1.0.5"
 REMOTE_SCRIPT_URL = "https://raw.githubusercontent.com/Suryesh/Algopwn/main/algopwn.py"
 
 
@@ -44,21 +44,60 @@ def help_menu():
 """
     print(help_text)
 
+def compare_versions(local, remote):
+    """Compare two version strings"""
+    local_parts = list(map(int, local.split('.')))
+    remote_parts = list(map(int, remote.split('.')))
+    
+    for i in range(max(len(local_parts), len(remote_parts))):
+        local_num = local_parts[i] if i < len(local_parts) else 0
+        remote_num = remote_parts[i] if i < len(remote_parts) else 0
+        if local_num < remote_num:
+            return -1
+        elif local_num > remote_num:
+            return 1
+    return 0
+
+def perform_update(new_script_content):
+    """Update the current script with new content"""
+    try:
+        with open(__file__, 'w', encoding='utf-8') as f:
+            f.write(new_script_content)
+        print(f"{Fore.GREEN}[+] Update successful! Please restart the script.{Style.RESET_ALL}")
+        sys.exit(0)
+    except Exception as e:
+        print(f"{Fore.RED}[!] Failed to update script: {e}{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}[*] You can manually update from: {REMOTE_SCRIPT_URL}{Style.RESET_ALL}")
 
 def check_for_updates():
     try:
-        response = requests.get(REMOTE_SCRIPT_URL)
+        print(f"{Fore.CYAN}[*] Checking for updates...{Style.RESET_ALL}")
+        response = requests.get(REMOTE_SCRIPT_URL, timeout=5)
         if response.status_code == 200:
-            remote_version = re.search(r'SCRIPT_VERSION = "(\d+\.\d+\.\d+)"', response.text)
-            if remote_version and remote_version.group(1) != SCRIPT_VERSION:
-                print(colored(f"\nUpdate available: v{remote_version.group(1)}", 'green'))
-                if input(colored("Update now? (y/n): ", 'yellow')).lower() == 'y':
-                    with open(__file__, 'w') as f:
-                        f.write(response.text)
-                    print(colored("Update successful! Please restart.", 'green'))
-                    sys.exit(0)
-    except Exception:
-        pass
+            # Look for SCRIPT_VERSION in the remote file
+            remote_version_match = re.search(r'SCRIPT_VERSION\s*=\s*"(\d+\.\d+\.\d+)"', response.text)
+            if remote_version_match:
+                remote_version = remote_version_match.group(1)
+                local_version = SCRIPT_VERSION
+                
+                # Compare versions
+                if compare_versions(local_version, remote_version) < 0:
+                    print(f"{Fore.GREEN}[!] Update available: v{remote_version} (current: v{local_version}){Style.RESET_ALL}")
+                    update_choice = input(f"{Fore.YELLOW}[?] Do you want to update now? (y/n): {Style.RESET_ALL}").strip().lower()
+                    if update_choice == 'y':
+                        perform_update(response.text)
+                    else:
+                        print(f"{Fore.YELLOW}[*] You can update manually from: {REMOTE_SCRIPT_URL}{Style.RESET_ALL}")
+                else:
+                    print(f"{Fore.GREEN}[*] You are running the latest version (v{local_version}){Style.RESET_ALL}")
+            else:
+                print(f"{Fore.YELLOW}[!] Could not detect version in remote script{Style.RESET_ALL}")
+        else:
+            print(f"{Fore.YELLOW}[!] Could not check for updates (HTTP {response.status_code}){Style.RESET_ALL}")
+    except requests.exceptions.RequestException as e:
+        print(f"{Fore.YELLOW}[!] Could not check for updates: {e}{Style.RESET_ALL}")
+    except Exception as e:
+        print(f"{Fore.YELLOW}[!] Error checking for updates: {e}{Style.RESET_ALL}")
 
 # acl permission
 
@@ -148,10 +187,7 @@ def main():
         help_menu()
         return
     print_banner()
-    try:
-        check_for_updates()
-    except TypeError:
-        check_for_updates(False)
+    check_for_updates()
 
     app_id = input(f"{Fore.YELLOW}Enter Algolia Application ID: {Style.RESET_ALL}").strip()
     api_key = input(f"{Fore.YELLOW}Enter Algolia API Key: {Style.RESET_ALL}").strip()
