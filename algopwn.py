@@ -22,7 +22,7 @@ def print_banner():
          |___/                             
     """
     print(Fore.CYAN + banner + Style.RESET_ALL)
-    print(Fore.GREEN + "      Algolia API Key Exploiter by Suryesh\n" + Style.RESET_ALL)
+    print(Fore.GREEN + "      Algolia API Key Exploiter by Suryesh v: {}.format(SCRIPT_VERSION)\n" + Style.RESET_ALL)
     print(f"{Fore.MAGENTA}You can follow me on Twitter/X: {Fore.CYAN}https://x.com/Suryesh_92{Style.RESET_ALL}\n")
     print(f"{Fore.MAGENTA}Subscribe to my Youtube Channel: {Fore.CYAN}https://www.youtube.com/@HackWithSuryesh{Style.RESET_ALL}\n")
 
