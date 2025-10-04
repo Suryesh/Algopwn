@@ -5,6 +5,11 @@ import requests
 import sys
 from colorama import Fore, Style, init
 
+
+SCRIPT_VERSION = "1.0.5"
+REMOTE_SCRIPT_URL = "https://raw.githubusercontent.com/Suryesh/Algopwn/main/algopwn.py"
+
+
 # Banner
 
 def print_banner():
@@ -40,6 +45,22 @@ def help_menu():
     print(help_text)
 
 init(autoreset=True)
+
+
+def check_for_updates():
+    try:
+        response = requests.get(REMOTE_SCRIPT_URL)
+        if response.status_code == 200:
+            remote_version = re.search(r'SCRIPT_VERSION = "(\d+\.\d+\.\d+)"', response.text)
+            if remote_version and remote_version.group(1) != SCRIPT_VERSION:
+                print(colored(f"\nUpdate available: v{remote_version.group(1)}", 'green'))
+                if input(colored("Update now? (y/n): ", 'yellow')).lower() == 'y':
+                    with open(__file__, 'w') as f:
+                        f.write(response.text)
+                    print(colored("Update successful! Please restart.", 'green'))
+                    sys.exit(0)
+    except Exception:
+        pass
 
 # acl permission
 
@@ -154,3 +175,4 @@ def main():
         )
 if __name__ == "__main__":
     main()
+    check_for_updates()
