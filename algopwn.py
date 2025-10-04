@@ -147,7 +147,7 @@ def main():
     if "-h" in sys.argv or "--help" in sys.argv:
         help_menu()
         return
-    print_bannera()
+    print_banner()
     try:
         check_for_updates()
     except TypeError:
