@@ -5,8 +5,8 @@ import requests
 import sys
 from colorama import Fore, Style, init
 
-
-SCRIPT_VERSION = "1.0.2"
+init(autoreset=True)
+SCRIPT_VERSION = "1.0.3"
 REMOTE_SCRIPT_URL = "https://raw.githubusercontent.com/Suryesh/Algopwn/main/algopwn.py"
 
 
@@ -22,7 +22,7 @@ def print_banner():
          |___/                             
     """
     print(Fore.CYAN + banner + Style.RESET_ALL)
-    print(Fore.GREEN + "      Algolia API Key Exploiter by Suryesh v: {SCRIPT_VERSION}" + Style.RESET_ALL)
+    print(Fore.GREEN + f"      Algolia API Key Exploiter by Suryesh v: {SCRIPT_VERSION}" + Style.RESET_ALL)
     print(f"{Fore.MAGENTA}You can follow me on Twitter/X: {Fore.CYAN}https://x.com/Suryesh_92{Style.RESET_ALL}\n")
     print(f"{Fore.MAGENTA}Subscribe to my Youtube Channel: {Fore.CYAN}https://www.youtube.com/@HackWithSuryesh{Style.RESET_ALL}\n")
 
@@ -43,8 +43,6 @@ def help_menu():
    - Exploitation updates highlightPreTag for safe exploitation and prints PoC verification URL
 """
     print(help_text)
-
-init(autoreset=True)
 
 
 def check_for_updates():
@@ -150,6 +148,7 @@ def main():
         help_menu()
         return
     print_banner()
+    check_for_updates()
 
     app_id = input(f"{Fore.YELLOW}Enter Algolia Application ID: {Style.RESET_ALL}").strip()
     api_key = input(f"{Fore.YELLOW}Enter Algolia API Key: {Style.RESET_ALL}").strip()
@@ -174,5 +173,4 @@ def main():
             f"\n{Fore.GREEN}This key only has {list(found_informative) or 'unknown'} permissions. So, it is Informative only.{Style.RESET_ALL}"
         )
 if __name__ == "__main__":
-    check_for_updates()
     main()
